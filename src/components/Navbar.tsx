@@ -1,62 +1,35 @@
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const trackOrderNowClick = () => {
-    console.log('OrderNowClick tracked');
-    // Meta Pixel event tracking would go here
-    window.location.href = 'https://lobster-guys-rolls-fries.square.site/';
-  };
-
+export default function Navbar() {
   return (
-    <nav className="py-4 bg-lobster-cream sticky top-0 z-50 shadow-sm">
-      <div className="container-custom flex justify-between items-center">
-        <div className="flex items-center">
-          <img 
-            src="/costa-mesa-lobster-site/lovable-uploads/logo.png"
-            alt="Lobster Grill Logo" 
-            className="h-14 md:h-16"
-          />
-        </div>
-        
-        <div className="hidden md:flex space-x-6 items-center">
-          <a href="#menu" className="font-medium hover:text-lobster-red transition-colors">Menu</a>
-          <a href="#location" className="font-medium hover:text-lobster-red transition-colors">Location</a>
-          <a href="#contact" className="font-medium hover:text-lobster-red transition-colors">Contact</a>
-          <Button onClick={trackOrderNowClick} className="btn-primary">
-            Order Now
-          </Button>
-        </div>
-        
-        <div className="md:hidden">
-          <Button onClick={toggleMenu} variant="outline" size="icon">
-            <Menu className="h-6 w-6" />
-          </Button>
-        </div>
+    <nav className="bg-[#1a1a1a] text-white flex items-center justify-between px-6 py-4 shadow-md">
+      {/* Logo */}
+      <Link to="/">
+        <img
+          src="/logo.png"
+          alt="Lobster Grill Logo"
+          className="h-10"
+        />
+      </Link>
+
+      {/* Navigation Links */}
+      <div className="flex gap-6 items-center text-sm font-medium">
+        <a href="#menu" className="hover:text-red-400">Menu</a>
+        <a href="#location" className="hover:text-red-400">Location</a>
+        <a href="#contact" className="hover:text-red-400">Contact</a>
       </div>
-      
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-50 animate-fade-in">
-          <div className="container-custom py-4 flex flex-col space-y-4">
-            <a href="#menu" className="py-2 font-medium hover:text-lobster-red transition-colors" onClick={() => setIsMenuOpen(false)}>Menu</a>
-            <a href="#location" className="py-2 font-medium hover:text-lobster-red transition-colors" onClick={() => setIsMenuOpen(false)}>Location</a>
-            <a href="#contact" className="py-2 font-medium hover:text-lobster-red transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
-            <Button onClick={trackOrderNowClick} className="btn-primary w-full">
-              Order Now
-            </Button>
-          </div>
-        </div>
-      )}
+
+      {/* Order Now Button */}
+      <a
+        href="https://order.toasttab.com/online/lobster-grill-1750-newport-boulevard"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded">
+          Order Now
+        </button>
+      </a>
     </nav>
   );
-};
-
-export default Navbar;
+}
