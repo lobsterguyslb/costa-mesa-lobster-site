@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center">
           <img 
-            src="/lovable-uploads/d560a243-7d42-49a0-a73b-e1e2f78409d4.png" 
+            src="/costa-mesa-lobster-site/lovable-uploads/logo.png"
             alt="Lobster Grill Logo" 
             className="h-14 md:h-16"
           />

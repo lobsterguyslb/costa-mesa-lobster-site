@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-8 mb-8">
           <a href="#" className="mb-6 md:mb-0">
             <img 
-              src="/lovable-uploads/d560a243-7d42-49a0-a73b-e1e2f78409d4.png" 
+              src="/costa-mesa-lobster-site/lovable-uploads/logo.png" 
               alt="Lobster Grill Logo" 
               className="h-14"
             />
