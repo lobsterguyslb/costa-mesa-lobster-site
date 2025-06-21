@@ -1,92 +1,205 @@
-
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { ShoppingCart } from "lucide-react";
 
-type MenuItem = {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-};
-
-const menuItems: MenuItem[] = [
+const menu = [
   {
-    id: "connecticut-lobster-roll",
-    name: "Connecticut Style Lobster Roll",
-    description: "Warm lobster meat tossed in drawn butter, served on a toasted split-top bun with green onion. Traditional New England style.",
-    image: "/lovable-uploads/7965f604-313f-453f-9eab-6a896fd64445.png"
+    title: "Our Featured Menu",
+    description:
+      "What's everyone raving about? Here are some of our customer favorites!",
+    items: [
+      { name: "Lobster Roll", price: "$24.99" },
+      { name: "Calamares", price: "$14.99" },
+      { name: "Lobster Mac and Cheese", price: "$22.50" },
+      { name: "Clam Chowder", price: "$9.99" },
+    ],
   },
   {
-    id: "maine-lobster-roll",
-    name: "Maine Style Lobster Roll",
-    description: "Chilled lobster meat tossed with light mayonnaise, lemon, and celery salt, served on a toasted split-top bun.",
-    image: "/lovable-uploads/4f803037-e3ce-457f-8cca-1c8e9e5c176f.png"
+    title: "Rolls",
+    items: [
+      {
+        name: "Clobster Roll",
+        price: "$19.95",
+        description:
+          "Crab and lobster. Served Warm Connecticut or Chilled Maine style",
+      },
+      {
+        name: "Maine Style Lobster Roll",
+        price: "$20.95",
+        description:
+          "Chilled. Lobster, lemon herb aioli, green onion, and old bay",
+      },
+      {
+        name: "Cajun Shrimp Roll",
+        price: "$13.95",
+        description: "Grilled. Cajun shrimp, mayo, and green onion",
+      },
+      {
+        name: "Crab Roll",
+        price: "$15.95",
+        description:
+          "Lump crab served Warm Connecticut or Chilled Maine style",
+      },
+      {
+        name: "Connecticut Style Lobster Roll",
+        price: "$20.95",
+        description:
+          "Warm lobster, butter, mayo, green onion, and old bay",
+      },
+      {
+        name: "Cali Truffle Roll",
+        price: "$21.95",
+        description:
+          "Chilled Maine. Lobster, truffle oil, herb mayo, avocado, cucumber, carrots, red onion, lettuce, celery, old bay, and green onions",
+      },
+    ],
   },
   {
-    id: "lobster-mac",
-    name: "Lobster Mac and Cheese",
-    description: "Creamy three-cheese blend mac and cheese topped with generous chunks of fresh lobster meat and toasted breadcrumbs.",
-    image: "/lovable-uploads/e5a7364b-f9b8-426a-9e7f-d5172f36b1c7.png"
+    title: "Tacos",
+    items: [
+      {
+        name: "Lobster Tacos",
+        price: "$15.25",
+        description:
+          "Maine lobster with premium seafood, pico de gallo, chipotle aioli, shredded lettuce",
+      },
+      {
+        name: "Chicken Tacos",
+        price: "$10.00",
+        description:
+          "3 per order. Shredded chicken, pico de gallo, shredded lettuce.",
+      },
+      {
+        name: "Barbacoa Tacos",
+        price: "$12.50",
+        description: "Beef barbacoa, cheese, lettuce.",
+      },
+      {
+        name: "Cajun Shrimp Tacos",
+        price: "$14.50",
+        description:
+          "Grilled shrimp, lemon dill aioli, pico de gallo, shredded lettuce",
+      },
+    ],
   },
   {
-    id: "clam-chowder",
-    name: "Clam Chowder",
-    description: "Hearty New England style clam chowder with tender clams, potatoes, and bacon in a rich, creamy broth.",
-    image: "/lovable-uploads/5788e1db-1735-49fd-9a6f-e8253dfc9332.png"
-  }
+    title: "Quesadillas",
+    items: [
+      {
+        name: "Lobster Quesadilla",
+        price: "$16.00",
+        description: "Maine lobster with cheese and premium seafood",
+      },
+      {
+        name: "Barbacoa Quesadilla",
+        price: "$13.25",
+        description: "Beef barbacoa, cheese, salsa, lemon dill aioli.",
+      },
+      {
+        name: "Chicken Quesadilla",
+        price: "$11.00",
+        description:
+          "Marinated chicken, cheese, with salsa and lemon dill aioli.",
+      },
+      {
+        name: "Arugula & Cheese Quesadilla",
+        price: "$7.00",
+        description: "Served with salsa",
+      },
+    ],
+  },
+  {
+    title: "Soups",
+    items: [
+      {
+        name: "Lobster Bisque",
+        price: "$8.00 - $15.00",
+        description: "Smooth and creamy bisque",
+      },
+      {
+        name: "New England Clam Chowder",
+        price: "$8.00 - $15.00",
+        description: "Traditional white clam chowder",
+      },
+      {
+        name: "Tomato Soup",
+        price: "$5.00 - $9.00",
+        description: "Fresh & creamy tomato soup",
+      },
+    ],
+  },
+  {
+    title: "Fries & Sides",
+    items: [
+      {
+        name: "Fried Calamari Fries",
+        price: "$9.50",
+        description:
+          "Panko breaded calamari strips served with cocktail sauce",
+      },
+      {
+        name: "Flaming Hot Lobster Fries",
+        price: "$21.75",
+        description:
+          "A large portion of fries with buttered lobster, cheese sauce, flaming hot Cheetos, and jalapeño.",
+      },
+      {
+        name: "Fries/Regular",
+        price: "$6.00",
+        description: "Classic crispy french fries",
+      },
+      {
+        name: "Sweet Potato Waffle Fries",
+        price: "$6.00 - $9.00",
+        description: "Crispy sweet potato waffle cut fries",
+      },
+    ],
+  },
 ];
 
-const MenuPreview = () => {
-  const trackOrderItemClick = (itemName: string) => {
-    console.log(`OrderItemClick_${itemName.replace(/\s+/g, '')} tracked`);
-    // Meta Pixel event tracking would go here
-    window.location.href = 'https://lobster-guys-rolls-fries.square.site/';
-  };
-
+export default function Menu() {
   return (
-    <section id="menu" className="py-16 md:py-24 bg-white">
-      <div className="container-custom">
-        <h2 className="section-heading text-center">Our Menu</h2>
-        <p className="section-subheading text-center">
-          Fresh-caught New England lobster and seafood classics, prepared to perfection.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
-          {menuItems.map((item) => (
-            <Card key={item.id} className="overflow-hidden border shadow-md hover:shadow-lg transition-shadow">
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.name} 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="font-display text-2xl text-lobster-dark">{item.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base text-gray-700">{item.description}</CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button onClick={() => trackOrderItemClick(item.name)} className="btn-primary w-full">
-                  Order Now
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <Button 
-            onClick={() => window.location.href = 'https://lobster-guys-rolls-fries.square.site/'} 
-            className="btn-primary"
-          >
-            View Complete Menu
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-};
+    <div className="px-4 py-10 md:px-6">
+      {menu.map((section, i) => (
+        <section key={i} className="mb-14">
+          <h2 className="text-center text-3xl font-bold text-neutral-900 mb-2">
+            {section.title}
+          </h2>
+          {section.description && (
+            <p className="text-center text-neutral-500 mb-6">
+              {section.description}
+            </p>
+          )}
 
-export default MenuPreview;
+          <div className="mx-auto max-w-2xl rounded-xl bg-white p-6 shadow">
+            {section.items.map((item, j) => (
+              <div
+                key={j}
+                className="border-b border-neutral-200 py-4 last:border-b-0"
+              >
+                <div className="flex items-center justify-between font-semibold text-neutral-900">
+                  <div>{item.name}</div>
+                  <div className="text-red-500">{item.price}</div>
+                </div>
+                {item.description && (
+                  <p className="text-sm text-neutral-500 mt-1">
+                    {item.description}
+                  </p>
+                )}
+              </div>
+            ))}
+
+            <div className="flex justify-center pt-6">
+              <Button>
+                <ShoppingCart className="mr-2 h-4 w-4" /> Order Now
+              </Button>
+            </div>
+          </div>
+        </section>
+      ))}
+
+      <div className="flex justify-center pt-4">
+        <Button>See Full Menu</Button>
+      </div>
+    </div>
+  );
+}
