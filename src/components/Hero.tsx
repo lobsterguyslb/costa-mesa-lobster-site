@@ -33,7 +33,7 @@ export default function Hero() {
         </div>
         <div className="w-full max-w-md flex-shrink-0">
           <img
-            src="/lovable-uploads/lobster-roll.png"
+            src="lovable-uploads/lobster-roll.png"
             alt="Lobster Roll"
             className="rounded-xl shadow-xl"
           />
