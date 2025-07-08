@@ -37,6 +37,7 @@ export function Navbar() {
           </Button>
         </a>
       </div>
+      </div>
     </header>
   )
 }
