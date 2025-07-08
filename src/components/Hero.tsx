@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="bg-[#0f1115] text-[#f4f0e6] py-12">
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
         <div className="max-w-2xl text-center lg:text-left">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
             Fresh Lobster Rolls &<br />Seafood in Costa Mesa
@@ -31,11 +31,11 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="w-full max-w-md flex-shrink-0">
+        <div className="w-full lg:w-1/2">
           <img
             src="lovable-uploads/lobster-roll.png"
             alt="Lobster Roll"
-            className="rounded-xl shadow-xl"
+            className="rounded-xl shadow-xl w-full h-auto"
           />
         </div>
       </div>
