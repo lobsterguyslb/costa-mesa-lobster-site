@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import Navbar from "@/components/Navbar";
+import { Navbar } from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import MenuPreview from "@/components/MenuPreview";
 import Location from "@/components/Location";
