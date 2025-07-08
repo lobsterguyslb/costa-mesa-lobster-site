@@ -24,10 +24,10 @@ export default function Hero() {
         </div>
         <div className="w-full max-w-md">
           <img
-            src="/lovable-uploads/lobster-roll.png"
-            alt="Lobster Roll"
-            className="rounded-xl shadow-xl"
-          />
+  src="/costa-mesa-lobster-site/lovable-uploads/lobster-roll.png"
+  alt="Lobster Roll"
+  className="rounded-xl shadow-xl"
+/>
         </div>
       </div>
     </section>
