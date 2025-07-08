@@ -188,23 +188,18 @@ export default function Menu() {
               </div>
             ))}
 
-            <div className="flex justify-center pt-6">
-              <a
-    href="https://order.toasttab.com/online/lobster-grill-1750-newport-boulevard"
-    target="_blank"
-    rel="noopener noreferrer">
-    </a>
-              <Button>
-                <ShoppingCart className="mr-2 h-4 w-4" /> Order Now
-              </Button>
-            </div>
-          </div>
-        </section>
-      ))}
-
-      <div className="flex justify-center pt-4">
-        <Button>See Full Menu</Button>
+           <div className="flex justify-center pt-6">
+        <a
+          href="https://order.toasttab.com/online/lobster-grill-1750-newport-boulevard"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button>
+            <ShoppingCart className="mr-2 h-4 w-4" />
+            Order Now
+          </Button>
+        </a>
       </div>
-    </section>
-  );
-}
+    </div>
+  </section>
+))}
