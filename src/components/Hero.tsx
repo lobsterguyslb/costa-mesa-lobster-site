@@ -24,7 +24,7 @@ export default function Hero() {
             <a href="#menu">
               <Button
                 variant="outline"
-                className="border-[#f4f0e6] text-[#f4f0e6] hover:bg-[#f4f0e6] hover:text-black"
+                className="border-[#f4f0e6] text-red-600 hover:bg-[#f4f0e6] hover:text-black"
               >
                 See Full Menu
               </Button>
@@ -37,6 +37,9 @@ export default function Hero() {
             alt="Lobster Roll"
             className="rounded-xl shadow-xl w-full h-auto"
           />
+          <div className="absolute bottom-4 left-4 bg-amber-100 text-black text-sm px-4 py-2 rounded-lg shadow-md">
+    <strong className="block font-semibold">Open Daily</strong>
+    10:30 AM - 8:30 PM
         </div>
       </div>
     </section>
