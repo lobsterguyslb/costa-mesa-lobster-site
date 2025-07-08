@@ -9,7 +9,7 @@ export function Navbar() {
       <img
         src="/costa-mesa-lobster-site/lovable-uploads/logo.png"
         alt="Lobster Grill Logo"
-        className="h-13 w-auto"
+        className="h-16 w-auto"
       />
     </a>
 
