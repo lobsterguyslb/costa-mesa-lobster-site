@@ -9,20 +9,20 @@ export function Navbar() {
       <img
         src="/costa-mesa-lobster-site/lovable-uploads/logo.png"
         alt="Lobster Grill Logo"
-        className="h-10 w-auto"
+        className="h-15 w-auto"
       />
     </a>
 
         {/* Right side: Nav + Button */}
     <div className="flex items-center gap-8">
       <nav className="flex gap-8 text-lg font-semibold">
-          <a href="#menu" className="hover:underline">
+          <a href="#menu" className="text-[#fefae0] hover:text-red-600 transition">
             Menu
           </a>
-          <a href="#location" className="hover:underline">
+          <a href="#location" className="text-[#fefae0] hover:text-red-600 transition">
             Visit Us
           </a>
-          <a href="#contact" className="hover:underline">
+          <a href="#contact" className="text-[#fefae0] hover:text-red-600 transition">
             Contact
           </a>
         </nav>
