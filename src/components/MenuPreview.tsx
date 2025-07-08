@@ -158,48 +158,51 @@ const menu = [
 
 export default function Menu() {
   return (
-    <section id="menu" className="px-4 py-10 md:px-6">
-      {menu.map((section, i) => (
-        <section key={i} className="mb-14">
-          <h2 className="text-center text-3xl font-bold text-neutral-900 mb-2">
-            {section.title}
-          </h2>
-          {section.description && (
-            <p className="text-center text-neutral-500 mb-6">
-              {section.description}
-            </p>
-          )}
+  <section id="menu" className="px-4 py-10 md:px-6">
+    {menu.map((section, i) => (
+      <section key={i} className="mb-14">
+        <h2 className="text-center text-3xl font-bold text-neutral-900 mb-2">
+          {section.title}
+        </h2>
+        {section.description && (
+          <p className="text-center text-neutral-500 mb-6">
+            {section.description}
+          </p>
+        )}
 
-          <div className="mx-auto max-w-2xl rounded-xl bg-white p-6 shadow">
-            {section.items.map((item, j) => (
-              <div
-                key={j}
-                className="border-b border-neutral-200 py-4 last:border-b-0"
-              >
-                <div className="flex items-center justify-between font-semibold text-neutral-900">
-                  <div>{item.name}</div>
-                  <div className="text-red-500">{item.price}</div>
-                </div>
-                {item.description && (
-                  <p className="text-sm text-neutral-500 mt-1">
-                    {item.description}
-                  </p>
-                )}
+        <div className="mx-auto max-w-2xl rounded-xl bg-white p-6 shadow">
+          {section.items.map((item, j) => (
+            <div
+              key={j}
+              className="border-b border-neutral-200 py-4 last:border-b-0"
+            >
+              <div className="flex items-center justify-between font-semibold text-neutral-900">
+                <div>{item.name}</div>
+                <div className="text-red-500">{item.price}</div>
               </div>
-            ))}
+              {item.description && (
+                <p className="text-sm text-neutral-500 mt-1">
+                  {item.description}
+                </p>
+              )}
+            </div>
+          ))}
 
-           <div className="flex justify-center pt-6">
-        <a
-          href="https://order.toasttab.com/online/lobster-grill-1750-newport-boulevard"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button>
-            <ShoppingCart className="mr-2 h-4 w-4" />
-            Order Now
-          </Button>
-        </a>
-      </div>
-    </div>
+          <div className="flex justify-center pt-6">
+            <a
+              href="https://order.toasttab.com/online/lobster-grill-1750-newport-boulevard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>
+                <ShoppingCart className="mr-2 h-4 w-4" />
+                Order Now
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+    ))}
   </section>
-))}
+);
+}
