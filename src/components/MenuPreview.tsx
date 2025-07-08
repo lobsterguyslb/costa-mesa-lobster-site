@@ -158,7 +158,7 @@ const menu = [
 
 export default function Menu() {
   return (
-    <div className="px-4 py-10 md:px-6">
+    <section id="menu" className="px-4 py-10 md:px-6">
       {menu.map((section, i) => (
         <section key={i} className="mb-14">
           <h2 className="text-center text-3xl font-bold text-neutral-900 mb-2">
@@ -200,6 +200,6 @@ export default function Menu() {
       <div className="flex justify-center pt-4">
         <Button>See Full Menu</Button>
       </div>
-    </div>
+    </section>
   );
 }
