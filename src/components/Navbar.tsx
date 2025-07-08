@@ -7,7 +7,7 @@ export function Navbar() {
     <header className="bg-[#1a1a1a] text-white">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/costa-mesa-lobster-site/public/lovable-uploads/logo.png" alt="Lobster Grill Logo" className="h-10 w-auto" />
+          <img src="/costa-mesa-lobster-site/lovable-uploads/logo.png" alt="Lobster Grill Logo" className="h-10 w-auto" />
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link to="/menu" className="hover:underline">Menu</Link>
