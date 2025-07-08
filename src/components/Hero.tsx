@@ -40,6 +40,7 @@ export default function Hero() {
           <div className="absolute bottom-4 left-4 bg-amber-100 text-black text-sm px-4 py-2 rounded-lg shadow-md">
     <strong className="block font-semibold">Open Daily</strong>
     10:30 AM - 8:30 PM
+    </div>
         </div>
       </div>
     </section>
